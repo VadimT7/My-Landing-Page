@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Images</title>
+</head>
+<body>
+    <h1>Placeholder Image Generator</h1>
+    <p>Right-click and save each image:</p>
+    
+    <!-- Before Image -->
+    <h2>before.jpg</h2>
+    <canvas id="before" width="1920" height="1080"></canvas>
+    
+    <!-- After Image -->
+    <h2>after.jpg</h2>
+    <canvas id="after" width="1920" height="1080"></canvas>
+    
+    <!-- Fleet Images -->
+    <h2>fleet1.jpg</h2>
+    <canvas id="fleet1" width="1920" height="1080"></canvas>
+    
+    <h2>fleet2.jpg</h2>
+    <canvas id="fleet2" width="1920" height="1080"></canvas>
+    
+    <h2>fleet3.jpg</h2>
+    <canvas id="fleet3" width="1920" height="1080"></canvas>
+    
+    <script>
+        // Before - Basic site
+        const before = document.getElementById('before').getContext('2d');
+        before.fillStyle = '#E5E5E5';
+        before.fillRect(0, 0, 1920, 1080);
+        before.fillStyle = '#666666';
+        before.font = 'bold 72px Arial';
+        before.textAlign = 'center';
+        before.fillText('BEFORE', 960, 480);
+        before.font = '36px Arial';
+        before.fillText('Basic Template Site', 960, 560);
+        
+        // After - Premium site
+        const after = document.getElementById('after').getContext('2d');
+        after.fillStyle = '#0B0B0C';
+        after.fillRect(0, 0, 1920, 1080);
+        after.fillStyle = '#C6A867';
+        after.font = 'bold 72px Arial';
+        after.textAlign = 'center';
+        after.fillText('AFTER', 960, 480);
+        after.fillStyle = '#F5F5F4';
+        after.font = '36px Arial';
+        after.fillText('Premium Luxury Experience', 960, 560);
+        
+        // Fleet 1
+        const fleet1 = document.getElementById('fleet1').getContext('2d');
+        fleet1.fillStyle = '#1A1A1C';
+        fleet1.fillRect(0, 0, 1920, 1080);
+        fleet1.fillStyle = '#C6A867';
+        fleet1.font = 'bold 48px Arial';
+        fleet1.textAlign = 'center';
+        fleet1.fillText('LUXURY FLEET', 960, 540);
+        
+        // Fleet 2
+        const fleet2 = document.getElementById('fleet2').getContext('2d');
+        fleet2.fillStyle = '#0B0B0C';
+        fleet2.fillRect(0, 0, 1920, 1080);
+        fleet2.fillStyle = '#F5F5F4';
+        fleet2.font = 'bold 48px Arial';
+        fleet2.textAlign = 'center';
+        fleet2.fillText('PREMIUM RENTALS', 960, 540);
+        
+        // Fleet 3
+        const fleet3 = document.getElementById('fleet3').getContext('2d');
+        fleet3.fillStyle = '#2A2A2C';
+        fleet3.fillRect(0, 0, 1920, 1080);
+        fleet3.fillStyle = '#C6A867';
+        fleet3.font = 'bold 48px Arial';
+        fleet3.textAlign = 'center';
+        fleet3.fillText('ELITE COLLECTION', 960, 540);
+    </script>
+</body>
+</html>

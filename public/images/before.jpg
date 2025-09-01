@@ -1,0 +1,5 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#E5E5E5"/>
+  <text x="960" y="480" text-anchor="middle" font-family="Arial" font-size="72" font-weight="bold" fill="#666666">BEFORE</text>
+  <text x="960" y="560" text-anchor="middle" font-family="Arial" font-size="36" fill="#666666">Basic Template Site</text>
+</svg>
