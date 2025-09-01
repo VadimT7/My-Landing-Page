@@ -37,7 +37,7 @@ export const landingData = {
     items: [
       {
         name: "Starter Presence",
-        price: "CAD $4000 (one-time)",
+        price: "CAD $2000 (one-time)",
         bullets: [
           "Custom-built luxury site",
           "Optimized for mobile + trust",
@@ -48,7 +48,7 @@ export const landingData = {
       },
       {
         name: "Booking System + Admin Panel",
-        price: "CAD $2000+",
+        price: "CAD $4000",
         bullets: [
           "Full custom system",
           "Booking flow, dashboard, fleet management",
@@ -56,6 +56,20 @@ export const landingData = {
         ],
         cta: "Discuss scope",
         popular: false
+      },
+      {
+        name: "Enterprise Fleet Management",
+        price: "CAD $8500+",
+        bullets: [
+          "Multi-location management system",
+          "Advanced analytics & reporting",
+          "Custom integrations & API access",
+          "Dedicated account management",
+          "Priority support & maintenance"
+        ],
+        cta: "Contact us",
+        popular: false,
+        anchor: true
       }
     ]
   },
@@ -68,14 +82,14 @@ export const landingData = {
     ]
   },
   footer: {
-    copyright: "© Premium Presence — Luxury brand sites for car rentals",
+    copyright: "© Sapphire Development — Luxury brand sites for car rentals",
     links: [
       { text: "Privacy", href: "/privacy" },
       { text: "Terms", href: "/terms" }
     ]
   },
   meta: {
-    title: "Premium Presence — Luxury Rental Brand Upgrades",
+    title: "Sapphire Development — Luxury Rental Brand Upgrades",
     description: "We turn small rental hustles into premium brands in under 72 hours."
   }
 }

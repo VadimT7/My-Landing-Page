@@ -16,13 +16,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Premium Presence — Luxury Rental Brand Upgrades",
+  title: "Sapphire Development — Luxury Rental Brand Upgrades",
   description: "We turn small rental hustles into premium brands in under 72 hours.",
   openGraph: {
-    title: "Premium Presence — Luxury Rental Brand Upgrades",
+    title: "Sapphire Development — Luxury Rental Brand Upgrades",
     description: "We turn small rental hustles into premium brands in under 72 hours.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://premiumpresence.com",
-    siteName: "Premium Presence",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://sapphiredevelopment.com",
+    siteName: "Sapphire Development",
     images: [
       {
         url: "/og-image.png",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Premium Presence — Luxury Rental Brand Upgrades",
+    title: "Sapphire Development — Luxury Rental Brand Upgrades",
     description: "We turn small rental hustles into premium brands in under 72 hours.",
     images: ["/og-image.png"],
     creator: process.env.NEXT_PUBLIC_IG_HANDLE || "@sapphire_development",
