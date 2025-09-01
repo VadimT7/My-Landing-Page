@@ -3,14 +3,16 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { landingData } from '@/data/landing'
+import ParticleBackground from './ParticleBackground'
 
 export default function Hero() {
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || '#'
-  const igHandle = process.env.NEXT_PUBLIC_IG_HANDLE || '@premiumpresence'
+  const igHandle = process.env.NEXT_PUBLIC_IG_HANDLE || '@sapphire_development'
   
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-16">
-      <div className="max-w-5xl mx-auto text-center">
+    <section className="relative min-h-screen flex items-center justify-center px-4 pt-16 overflow-hidden">
+      <ParticleBackground />
+      <div className="relative z-10 max-w-5xl mx-auto text-center">
         <motion.h1 
           className="text-4xl md:text-6xl lg:text-7xl font-serif text-foreground mb-6 leading-tight"
           initial={{ opacity: 0, y: 20 }}

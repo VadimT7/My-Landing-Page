@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Premium Presence — Luxury Rental Brand Upgrades",
     description: "We turn small rental hustles into premium brands in under 72 hours.",
     images: ["/og-image.png"],
-    creator: process.env.NEXT_PUBLIC_IG_HANDLE || "@premiumpresence",
+    creator: process.env.NEXT_PUBLIC_IG_HANDLE || "@sapphire_development",
   },
   robots: {
     index: true,

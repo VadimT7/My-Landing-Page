@@ -3,11 +3,17 @@
 import { motion } from 'framer-motion'
 import Section from './Section'
 import BeforeAfter from './BeforeAfter'
+import ParallaxWrapper from './ParallaxWrapper'
 import { landingData } from '@/data/landing'
 
 export default function CaseStudy() {
   return (
-    <Section className="bg-muted/30">
+    <Section className="relative bg-gradient-to-b from-muted/30 via-background to-muted/30 overflow-hidden">
+      {/* Luxury accent lines */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-gold/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-t from-gold/50 to-transparent"></div>
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,15 +25,17 @@ export default function CaseStudy() {
           {landingData.caseStudy.title}
         </h2>
         
-        <motion.blockquote
-          className="text-xl md:text-2xl lg:text-3xl font-serif text-foreground leading-relaxed mb-8 max-w-4xl mx-auto"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          &ldquo;{landingData.caseStudy.quote}&rdquo;
-        </motion.blockquote>
+        <ParallaxWrapper offset={30}>
+          <motion.blockquote
+            className="text-xl md:text-2xl lg:text-3xl font-serif text-foreground leading-relaxed mb-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            &ldquo;{landingData.caseStudy.quote}&rdquo;
+          </motion.blockquote>
+        </ParallaxWrapper>
         
         <motion.p
           className="text-lg md:text-xl italic text-gold mb-12"

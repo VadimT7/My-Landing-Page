@@ -6,14 +6,16 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Check } from 'lucide-react'
 import Section from './Section'
+import FloatingCards from './FloatingCards'
 import { landingData } from '@/data/landing'
 
 export default function Packages() {
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || '#'
   
   return (
-    <Section>
-      <div className="text-center mb-12">
+    <Section className="relative">
+      <FloatingCards />
+      <div className="relative z-10 text-center mb-12">
         <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">
           {landingData.packages.title}
         </h2>
@@ -28,7 +30,7 @@ export default function Packages() {
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="relative h-full bg-card border-border hover:border-gold transition-colors">
+            <Card className="relative h-full bg-card/80 backdrop-blur-sm border-border hover:border-gold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-gold/10">
               {pkg.popular && (
                 <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-background">
                   Most Popular

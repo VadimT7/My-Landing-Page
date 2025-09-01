@@ -195,4 +195,19 @@
     background: var(--gold);
     opacity: 0.8;
   }
+  
+  /* Shimmer animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 3s linear infinite;
+    background-size: 200% 100%;
+  }
 }

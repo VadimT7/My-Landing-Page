@@ -38,7 +38,7 @@ export const defaultMetadata: Metadata = {
     card: 'summary_large_image',
     title: 'Premium Presence — Luxury Rental Brand Upgrades',
     description: 'We turn small rental hustles into premium brands in under 72 hours.',
-    creator: process.env.NEXT_PUBLIC_IG_HANDLE || '@premiumpresence',
+    creator: process.env.NEXT_PUBLIC_IG_HANDLE || '@sapphire_development',
     images: ['/og-image.png'],
   },
   icons: {
@@ -58,7 +58,7 @@ export function generateJSONLD() {
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://premiumpresence.com',
     logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://premiumpresence.com'}/favicon.svg`,
     sameAs: [
-      `https://instagram.com/${(process.env.NEXT_PUBLIC_IG_HANDLE || '@premiumpresence').replace('@', '')}`,
+      `https://instagram.com/${(process.env.NEXT_PUBLIC_IG_HANDLE || '@sapphire_development').replace('@', '')}`,
     ],
     contactPoint: {
       '@type': 'ContactPoint',

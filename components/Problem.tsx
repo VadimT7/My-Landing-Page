@@ -3,12 +3,15 @@
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import Section from './Section'
+import GradientOrb from './GradientOrb'
 import { landingData } from '@/data/landing'
 
 export default function Problem() {
   return (
-    <Section className="bg-muted/30">
+    <Section className="relative bg-muted/30">
+      <GradientOrb />
       <motion.div
+        className="relative z-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

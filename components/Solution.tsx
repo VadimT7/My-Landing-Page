@@ -4,12 +4,15 @@ import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { Check } from 'lucide-react'
 import Section from './Section'
+import LuxuryGrid from './LuxuryGrid'
 import { landingData } from '@/data/landing'
 
 export default function Solution() {
   return (
-    <Section>
+    <Section className="relative">
+      <LuxuryGrid />
       <motion.div
+        className="relative z-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -45,7 +48,14 @@ export default function Solution() {
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Check className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Check className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+              </motion.div>
               <span className="text-lg text-foreground">{item}</span>
             </motion.div>
           ))}

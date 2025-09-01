@@ -37,7 +37,7 @@ export const landingData = {
     items: [
       {
         name: "Starter Presence",
-        price: "CAD $850 (one-time)",
+        price: "CAD $4000 (one-time)",
         bullets: [
           "Custom-built luxury site",
           "Optimized for mobile + trust",
