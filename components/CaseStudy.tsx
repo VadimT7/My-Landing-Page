@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Section from './Section'
-import BeforeAfter from './BeforeAfter'
+import VideoDemo from './VideoDemo'
 import ParallaxWrapper from './ParallaxWrapper'
 import { landingData } from '@/data/landing'
 
@@ -53,10 +53,7 @@ export default function CaseStudy() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">
-            {landingData.caseStudy.beforeAfterCaption}
-          </p>
-          <BeforeAfter />
+          <VideoDemo />
         </motion.div>
       </motion.div>
     </Section>

@@ -1,0 +1,27 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="sapphireGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C6A867;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#E6C886;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#C6A867;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A08958;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sapphireShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5F4;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#C6A867;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#C6A867;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sapphire gem shape -->
+  <path d="M16 4 L24 12 L20 28 L12 28 L8 12 Z" fill="url(#sapphireGradient)" stroke="#A08958" stroke-width="0.5"/>
+  
+  <!-- Facets for depth -->
+  <path d="M16 4 L20 12 L16 16 Z" fill="url(#sapphireShine)" opacity="0.6"/>
+  <path d="M16 4 L12 12 L16 16 Z" fill="url(#sapphireShine)" opacity="0.4"/>
+  <path d="M8 12 L12 12 L16 16 L12 28 Z" fill="#A08958" opacity="0.3"/>
+  <path d="M24 12 L20 12 L16 16 L20 28 Z" fill="#A08958" opacity="0.3"/>
+  
+  <!-- Central highlight -->
+  <path d="M16 8 L18 12 L16 14 L14 12 Z" fill="#F5F5F4" opacity="0.7"/>
+</svg>

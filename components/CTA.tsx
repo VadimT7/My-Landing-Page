@@ -1,14 +1,17 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import Section from './Section'
 import ShimmerBorder from './ShimmerBorder'
 import { landingData } from '@/data/landing'
+import CalendlyModal from './CalendlyModal'
+import PerformanceModal from './PerformanceModal'
 
 export default function CTA() {
-  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || '#'
-  const igHandle = process.env.NEXT_PUBLIC_IG_HANDLE || '@sapphire_development'
+  const [calOpen, setCalOpen] = useState(false)
+  const [perfOpen, setPerfOpen] = useState(false)
   
   return (
     <Section className="relative bg-gradient-to-b from-background via-muted/20 to-background overflow-hidden">
@@ -31,7 +34,7 @@ export default function CTA() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.2 }}
         viewport={{ once: true }}
         className="relative z-10 text-center max-w-3xl mx-auto"
       >
@@ -47,33 +50,35 @@ export default function CTA() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.05 }}
           viewport={{ once: true }}
         >
           <ShimmerBorder>
-            <Button 
-              asChild
-              size="lg"
-              className="bg-gold text-background hover:bg-gold-muted font-semibold text-lg px-8 py-6 w-full"
+            <button 
+              className="group relative px-8 py-4 bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-900 font-semibold text-lg rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300 hover:scale-105 active:scale-95 w-full"
+              onClick={() => setPerfOpen(true)}
+              data-analytics="click_cta"
+              data-analytics-meta='{"label":"cta_performance"}'
             >
-              <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
-                {landingData.cta.buttons[0]}
-              </a>
-            </Button>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative z-10">{landingData.cta.buttons[0].text}</span>
+            </button>
           </ShimmerBorder>
           
-          <Button 
-            asChild
-            size="lg"
-            variant="outline"
-            className="border-2 border-gold text-gold hover:bg-gold hover:text-background font-semibold text-lg px-8 py-6"
+          <button 
+            className="group relative px-8 py-4 bg-white/5 backdrop-blur-sm text-zinc-100 font-semibold text-lg rounded-xl overflow-hidden border border-white/10 hover:border-amber-500/50 shadow-lg hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300 hover:scale-105 active:scale-95 hover:bg-white/10"
+            onClick={() => setCalOpen(true)}
+            data-analytics="click_cta"
+            data-analytics-meta='{"label":"cta_calendly"}'
           >
-            <a href={`https://instagram.com/${igHandle.replace('@', '')}`} target="_blank" rel="noopener noreferrer">
-              {landingData.cta.buttons[1]} {igHandle}
-            </a>
-          </Button>
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <span className="relative z-10">{landingData.cta.buttons[1].text}</span>
+          </button>
         </motion.div>
       </motion.div>
+
+      <CalendlyModal open={calOpen} onClose={() => setCalOpen(false)} />
+      <PerformanceModal open={perfOpen} onClose={() => setPerfOpen(false)} />
     </Section>
   )
 }

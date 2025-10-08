@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
-            <h3 className="font-serif text-2xl text-foreground mb-2">Premium Presence</h3>
+            <h3 className="font-serif text-2xl text-foreground mb-2">Sapphire Drive</h3>
             <p className="text-muted-foreground">
               {landingData.footer.copyright.replace('©', `© ${currentYear}`)}
             </p>
@@ -34,8 +34,9 @@ export default function Footer() {
         
         <Separator className="my-8 bg-border" />
         
-        <div className="text-center text-sm text-muted-foreground">
-          <p>Built with precision. Delivered with excellence.</p>
+        <div className="text-center text-sm text-muted-foreground flex items-center justify-center gap-2">
+          <span>Powered by</span>
+          <span className="font-semibold text-foreground">Sapphire Drive</span>
         </div>
       </div>
     </footer>

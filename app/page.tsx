@@ -1,11 +1,12 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import Problem from '@/components/Problem'
-import Solution from '@/components/Solution'
+import Proof from '@/components/Proof'
+import HowItWorks from '@/components/HowItWorks'
 import CaseStudy from '@/components/CaseStudy'
 import Packages from '@/components/Packages'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
+import StickyCTA from '@/components/StickyCTA'
 
 export default function Home() {
   return (
@@ -13,13 +14,14 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Problem />
-        <Solution />
+        <Proof />
+        <HowItWorks />
         <CaseStudy />
         <Packages />
         <CTA />
       </main>
       <Footer />
+      <StickyCTA />
     </>
   )
 }
