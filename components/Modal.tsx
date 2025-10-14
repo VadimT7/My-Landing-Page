@@ -26,8 +26,8 @@ export default function Modal({ open, onClose, children, className }: ModalProps
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
       />
-      <div className="absolute inset-0 flex items-center justify-center p-4">
-        <div className={cn("w-full max-w-xl rounded-2xl bg-background border border-border shadow-2xl", className)}>
+      <div className="absolute inset-0 flex items-center justify-center p-4 overflow-y-auto">
+        <div className={cn("w-full max-w-xl my-8 rounded-2xl bg-background border border-border shadow-2xl max-h-[90vh] overflow-y-auto", className)}>
           {children}
         </div>
       </div>

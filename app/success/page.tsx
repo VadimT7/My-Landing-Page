@@ -1,11 +1,12 @@
 import Link from 'next/link'
 
-export default function SuccessPage({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
-  const plan = typeof searchParams.plan === 'string' ? searchParams.plan : 'starter'
+export default async function SuccessPage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
+  const params = await searchParams
+  const plan = typeof params.plan === 'string' ? params.plan : 'starter'
   return (
     <main className="px-4 pt-20 pb-24">
       <div className="max-w-3xl mx-auto text-center">
-        <h1 className="text-4xl font-serif mb-4">You're in ✅</h1>
+        <h1 className="text-4xl font-serif mb-4">You&apos;re in ✅</h1>
         <p className="text-muted-foreground mb-8">Thanks for starting {plan === 'pro' ? 'Pro' : plan === 'starter' ? 'Starter' : 'Performance'}.
           Next: book your 15-min setup call to finalize domain, Stripe, and go-live.
         </p>

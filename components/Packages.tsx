@@ -2,9 +2,8 @@
 
 import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import { Check } from 'lucide-react'
 import Section from './Section'
 
@@ -82,7 +81,7 @@ export default function Packages() {
     <Section className="relative" id="pricing">
       <div className="relative z-10 text-center mb-8">
         <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">Pricing that scales with you</h2>
-        <p className="text-muted-foreground mb-6">Start free, upgrade when you're ready. Cancel anytime.</p>
+        <p className="text-muted-foreground mb-6">Start free, upgrade when you&apos;re ready. Cancel anytime.</p>
         <div className="inline-flex items-center gap-3 p-1 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm">
           <button
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${

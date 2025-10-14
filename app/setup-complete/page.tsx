@@ -20,11 +20,11 @@ export default function SetupCompletePage() {
         </a>
 
         <div className="mt-12 text-left">
-          <h2 className="text-2xl font-serif mb-3">What's next?</h2>
+          <h2 className="text-2xl font-serif mb-3">What&apos;s next?</h2>
           <ol className="list-decimal pl-5 space-y-2 text-sm">
             <li>Book your 15-min call using the link above</li>
             <li>Send your IG handle and city during the call</li>
-            <li>We'll import your cars, connect Stripe, and launch</li>
+            <li>We&apos;ll import your cars, connect Stripe, and launch</li>
             <li>Post 3 IG stories we give you</li>
             <li>Watch bookings hit your phone in 7 days</li>
           </ol>

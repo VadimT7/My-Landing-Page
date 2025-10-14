@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
 import Section from './Section'
 import ShimmerBorder from './ShimmerBorder'
 import { landingData } from '@/data/landing'
